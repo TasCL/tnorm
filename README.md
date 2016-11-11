@@ -30,3 +30,10 @@ install.packages("tnormc_0.1.0.1.tar.gz", repos = NULL, type="source")
 ## Prerequisities
  - R (>= 3.0.2)
  - Rtools
+ - Rcpp package
+
+## References
+
+* This package is based on Jonathan Olmsted's 
+RcppTN 0.1-8 (https://github.com/olmjo/RcppTN) and
+and Christopher Jackson's msm package (https://cran.r-project.org/web/packages/msm/index.html). 
