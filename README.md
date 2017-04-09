@@ -1,6 +1,5 @@
 # Truncated Normal Distribution in C++
-Implement dtnorm and rtnorm functions use C++ codes.
-
+dtnorm and rtnorm functions in C++ codes.
 
 ## Getting Started
 
@@ -19,11 +18,10 @@ mtext("dtnorm(x)", col = "tomato", adj = 1)
 ## Installation 
 
 ```
-
 ## From github
 devtools::install_github("TasCL/tnorm")
 ## From source: 
-install.packages("tnormc_0.1.0.1.tar.gz", repos = NULL, type="source")
+install.packages("tnormc_0.2.0.0.tar.gz", repos = NULL, type="source")
 
 ```
 
@@ -33,6 +31,9 @@ install.packages("tnormc_0.1.0.1.tar.gz", repos = NULL, type="source")
  - Rcpp package
 
 ## References
+Robert, C. P. (1995). Simulation of truncated normal variables, Satatistics and 
+Computing, 5, 121--125. http://dx.doi.org/10.1007/BF00143942
+
 
 * This package is based on Jonathan Olmsted's 
 RcppTN 0.1-8 (https://github.com/olmjo/RcppTN) and
