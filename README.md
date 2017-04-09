@@ -7,11 +7,12 @@ dtnorm and rtnorm functions in C++ codes.
 require(tnorm)
 
 ## Plot regular normal and trunicated normal distributions
-plot(function(x) dnorm(x, log = FALSE), -2.5, 2.5,
-     main = "Normal Distribution", ylim=c(0,0.45), ylab="Density")
-curve(dtnorm(x, lower=-2, upper=2), add=TRUE, col="tomato", lwd=2)
+x <- seq(-2.5, 2.5, length.out=1e2)
+y <- dnorm(x)
+plot(x, y, type="l", lty="dashed", main = "Normal Distribution", ylim=c(0,0.45), ylab="Density")
+lines(x, dtn(x, 0, 1, -2, 2), col="tomato", lwd=2)
 mtext("dnorm(x)", adj = 0)
-mtext("dtnorm(x)", col = "tomato", adj = 1)
+mtext("dtnorm(x)", col="tomato", adj = 1)
 
 ```
 
@@ -26,15 +27,14 @@ install.packages("tnormc_0.2.0.0.tar.gz", repos = NULL, type="source")
 ```
 
 ## Prerequisities
+
  - R (>= 3.0.2)
  - Rtools
  - Rcpp package
 
 ## References
-Robert, C. P. (1995). Simulation of truncated normal variables, Satatistics and 
+
+ - Robert, C. P. (1995). Simulation of truncated normal variables, Satatistics and 
 Computing, 5, 121--125. http://dx.doi.org/10.1007/BF00143942
-
-
-* This package is based on Jonathan Olmsted's 
-RcppTN 0.1-8 (https://github.com/olmjo/RcppTN) and
-and Christopher Jackson's msm package (https://cran.r-project.org/web/packages/msm/index.html). 
+ - RcppTN 0.1-8 (https://github.com/olmjo/RcppTN) 
+ - msm package (https://cran.r-project.org/web/packages/msm/index.html). 
